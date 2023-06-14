@@ -92,7 +92,7 @@ app.put("/person/:id", (req, res) => {
   const personIndex = persons.findIndex((person) => person.id === personId);
   if (personIndex !== -1) {
     persons[personIndex] = { ...persons[personIndex], ...updatePerosn };
-    return res.status(201).json(persons[personId]);
+    return res.status(201).json(persons[personIndex]);
   } else {
     return res.status(404).json("User not found.");
   }
